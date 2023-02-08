@@ -10,7 +10,7 @@
 
 ### **_Description_**
 
-#### This application is available for NFL fans. Come here to review different stadiums and experiences!
+#### This application was designed for NFL fans. Here you can give your experience at the NFL game a rating and review. You can also get information on a stadium that you may want to go to!
 
 #### This application was developed to help fans showcase their experience at NFL stadiums.
 
