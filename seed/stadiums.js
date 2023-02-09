@@ -1,5 +1,5 @@
-const db = require('..db')
-const Stadium = require('../models/stadiums')
+const db = require('../db')
+const Stadium = require('../models/stadium')
 
 // connect to the db
 db.on('error', console.error.bind(console, 'MongoDB connection error'))
@@ -12,7 +12,7 @@ const main = async () => {
         'https://9b16f79ca967fd0708d1-2713572fef44aa49ec323e813b06d2d9.ssl.cf2.rackcdn.com/1140x_a10-7_cTC/20220711MTHeinzFieldAerials01-1657562902.jpg',
       location: 'Pittsburgh, PA',
       homeTeam: 'Pittsburgh Steelers',
-      capactiy: 68400,
+      capacity: 68400,
       fieldSurface: 'Grass'
     },
     {
@@ -272,8 +272,17 @@ const main = async () => {
         'https://img.apmcdn.org/d62c51a8154d401fd8aac5c4f5b8415709dddcd0/normal/253651-20160828-vikes01.jpg',
       location: 'Minneapolis, MN',
       homeTeam: 'Minnesota Vikings',
-      capacity: '66200',
+      capacity: 66200,
       fieldSurface: 'Field Turf'
     }
   ]
+
+  await Stadium.insertMany(stadiums)
+  console.log('Created the Stadiums')
 }
+const run = async () => {
+  await main()
+  db.close()
+}
+
+run()
