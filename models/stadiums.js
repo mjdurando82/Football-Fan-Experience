@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 const Stadium = new Schema(
   {
     name: { type: String, required: true },
-    image: { type: String, required: true },
+    imageUrl: { type: String, required: true },
     location: { type: String, required: true },
     homeTeam: { type: String, required: true },
     capacity: { type: Number, required: true },
