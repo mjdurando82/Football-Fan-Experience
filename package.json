@@ -1,0 +1,15 @@
+{
+  "name": "football-fan-experience",
+  "version": "1.0.0",
+  "description": "## Date 2/08/23",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^6.9.1"
+  }
+}
