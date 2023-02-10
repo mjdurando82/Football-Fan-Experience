@@ -10,7 +10,6 @@ const Home = () => {
   useEffect(() => {
     const getStadiums = async () => {
       const response = await axios.get(`${BASE_URL}/stadiums`)
-      console.log(response)
       setStadiums(response.data.stadiums)
     }
     getStadiums()
