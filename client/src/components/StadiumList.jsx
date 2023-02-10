@@ -1,7 +1,17 @@
-const StadiumList = () => {
+const StadiumList = (props) => {
+
   return(
-    <div>
-      Stadiums Here
+    <div className="stadiums">
+      <div className="image-wrapper">
+        <img src={props.imageUrl} alt='stadium'></img>
+      </div>
+      <div className="stadium-info">
+        <h3>{props.name}</h3>
+        <h5>{props.location}</h5>
+        <h5>{props.homeTeam}</h5>
+        <p>{props.capacity}</p>
+        <p>{props.fieldSurface}</p>
+      </div>
     </div>
   )
 }

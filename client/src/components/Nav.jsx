@@ -2,14 +2,14 @@ import { NavLink } from 'react-router-dom'
 
 const Nav = () => {
 
-  return(
-    <header>
-      <nav className="navbar">
-        <NavLink to='/'>Stadium</NavLink>
+  return (
+    <nav className='navbar'>
+      <div>
+        <NavLink to='/'>Home</NavLink>
         <NavLink to='/add-review'>Add Review</NavLink>
-        <NavLink to='/about'>About</NavLink>
+        <NavLink to='/about'>About Page</NavLink>
+      </div>
     </nav>
-    </header>
   )
 }
 
