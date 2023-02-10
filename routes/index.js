@@ -14,4 +14,6 @@ router.delete('/review/:id', controllers.deleteReview)
 
 router.get('/stadiums', controllers.getStadiums)
 
+router.put('/stadium/:id', controllers.updateStadium)
+
 module.exports = router

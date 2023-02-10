@@ -21,7 +21,7 @@ const Home = () => {
       <h2>Stadiums</h2>
       <section className="container-grid"></section>
       {stadiums.map((stadium) => (
-        <StadiumList name={stadium.name} location={stadium.location} imageUrl={stadium.imageUrl} homeTeam={stadium.homeTeam} capacity={stadium.capacity} fieldSurface={stadium.fieldSurface}/>
+        <StadiumList key={stadium.name} name={stadium.name} location={stadium.location} imageUrl={stadium.imageUrl} homeTeam={stadium.homeTeam} capacity={stadium.capacity} fieldSurface={stadium.fieldSurface}/>
       ))}
     </div>
   )

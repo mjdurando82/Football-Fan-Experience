@@ -55,10 +55,22 @@ const getStadiums = async (req, res) => {
   }
 }
 
+const updateStadium = async (req, res) => {
+  try {
+    const stadium = await Stadium.findByIdAndUpdate(req.params.id, req.body, {
+      new: true
+    })
+    res.status(200).json(stadium)
+  } catch (error) {
+    return res.status(500).send(error.message)
+  }
+}
+
 module.exports = {
   createReview,
   getAllReviews,
   updateReview,
   deleteReview,
-  getStadiums
+  getStadiums,
+  updateStadium
 }

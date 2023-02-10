@@ -224,7 +224,7 @@ const main = async () => {
     {
       name: 'Raymond James Stadium',
       imageUrl:
-        'https://static.wikia.nocookie.net/prowrestling/images/5/5f/Raymond_James_Stadium.JPG/revision/latest?cb=20190308131830',
+        'https://assets.simpleviewinc.com/simpleview/image/fetch/c_limit,h_1200,q_75,w_1200/https://assets.simpleviewinc.com/simpleview/image/upload/crm/tampabay/151227_EL_Bears_Bucs_08210_7cd82657-5056-a36a-08d8167afab403be.jpg',
       location: 'Tampa, FL',
       homeTeam: 'Tampa Bay Buccaneers',
       capacity: 65890,
