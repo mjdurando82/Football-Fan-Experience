@@ -1,7 +1,7 @@
 import axios from "axios"
 import { useState } from "react"
 
-const AddReview = (props) => {
+const AddReview = () => {
   const initialState = {
     stadium: '',
     name: '',
@@ -22,7 +22,7 @@ const AddReview = (props) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await axios.post('http://localhost:3001/review', setFormState)
+    await axios.post('http://localhost:3001/stadium/:id/reviews', formState)
     setFormState(initialState)
   }
 
@@ -30,8 +30,8 @@ const AddReview = (props) => {
     <form onSubmit={handleSubmit}>
       <h3>Review</h3>
       <label htmlFor="stadiumChoice">Pick a Stadium</label>
-  <select id="issueType" onChange={handleChange} value={formState.stadium}>
-    <option value="steelers">Acrisure Stadium</option>
+  <select id="stadium" onChange={handleChange} value={formState.stadium}>
+    <option value="63e53d83294a9028beb35f36">Acrisure Stadium</option>
     <option value="raiders">Allegiant Stadium</option>
     <option value="chiefs">Arrowhead Stadium</option>
     <option value="cowboys">AT&T Stadium</option>
