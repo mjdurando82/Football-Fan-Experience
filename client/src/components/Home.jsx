@@ -11,7 +11,7 @@ const Home = () => {
     const getStadiums = async () => {
       const response = await axios.get(`${BASE_URL}/stadiums`)
       console.log(response)
-      setStadiums(response)
+      setStadiums(response.data.stadiums)
     }
     getStadiums()
   }, [])
@@ -21,7 +21,7 @@ const Home = () => {
       <h2>Stadiums</h2>
       <section className="container-grid"></section>
       {stadiums.map((stadium) => (
-        <StadiumList name={stadium.name} location={stadium.location} image={stadium.imageUrl} homeTeam={stadium.homeTeam} capacity={stadium.capacity} fieldSurface={stadium.fieldSurface}/>
+        <StadiumList name={stadium.name} location={stadium.location} imageUrl={stadium.imageUrl} homeTeam={stadium.homeTeam} capacity={stadium.capacity} fieldSurface={stadium.fieldSurface}/>
       ))}
     </div>
   )

@@ -1,9 +1,9 @@
 // require ports and middleware
 const db = require('./db')
+const cors = require('cors')
 const logger = require('morgan')
 const express = require('express')
 const routes = require('./routes')
-const cors = require('cors')
 
 const PORT = process.env.PORT || 3001
 
