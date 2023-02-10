@@ -23,7 +23,14 @@ const Reviews = () => {
     <h3>Reviews:</h3>
     {reviews.map((review) => (
       <div key={review.id} className='review-container'>
-        <p>{review.name} {review.gameAttended} {review.stadiumRating} {review.foodRating} {review.parking} {review.seatSection} {review.ticketPrice} {review.description} </p>
+        <h5>{review.name}</h5>
+        <p>Game Attended: {review.gameAttended}</p>
+        <p>Stadium: {review.stadiumRating}</p> 
+        <p>Food: {review.foodRating}</p>
+        <p>Parking {review.parking}</p>
+        <p>Sat in Section: {review.seatSection}</p>
+        <p>TicketPrice: {review.ticketPrice}</p> 
+        <p>Additional Comments: {review.description}</p>
       </div>
     ))}
   </div>
