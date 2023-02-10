@@ -2,9 +2,10 @@ import './App.css'
 import Nav from './components/Nav'
 import Home from './components/Home'
 import About from './components/About'
+import Reviews from './components/Reviews'
+import AddReview from './components/AddReview'
 import { Routes, Route } from 'react-router-dom'
 import StadiumList from './components/StadiumList'
-import AddReview from './components/AddReview'
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/stadiums" element={<StadiumList />} />
           <Route path="/add-review" element={<AddReview />} />
+          <Route path="/stadium/:id/reviews" element={<Reviews />} />
         </Routes>
       </main>
     </div>

@@ -20,7 +20,9 @@ const Home = () => {
       <h2>Stadiums</h2>
       <section className="container-grid"></section>
       {stadiums.map((stadium) => (
-        <StadiumList key={stadium.name} name={stadium.name} location={stadium.location} imageUrl={stadium.imageUrl} homeTeam={stadium.homeTeam} capacity={stadium.capacity} fieldSurface={stadium.fieldSurface}/>
+        <Link to="/stadium/:id/reviews">
+          <StadiumList key={stadium.name} name={stadium.name} location={stadium.location} imageUrl={stadium.imageUrl} homeTeam={stadium.homeTeam} capacity={stadium.capacity} fieldSurface={stadium.fieldSurface}/>
+        </Link>
       ))}
     </div>
   )

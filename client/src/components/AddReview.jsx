@@ -3,6 +3,7 @@ import { useState } from "react"
 
 const AddReview = (props) => {
   const initialState = {
+    stadium: '',
     name: '',
     gameAttended: '',
     stadiumRating: '',
@@ -29,7 +30,7 @@ const AddReview = (props) => {
     <form onSubmit={handleSubmit}>
       <h3>Review</h3>
       <label htmlFor="stadiumChoice">Pick a Stadium</label>
-  <select id="issueType" onChange={handleChange} value={formState.issueType}>
+  <select id="issueType" onChange={handleChange} value={formState.stadium}>
     <option value="steelers">Acrisure Stadium</option>
     <option value="raiders">Allegiant Stadium</option>
     <option value="chiefs">Arrowhead Stadium</option>
@@ -60,24 +61,58 @@ const AddReview = (props) => {
     <option value="cardinals">State Farm Stadium</option>
     <option value="jaguars">TIAA Bank Field</option>
     <option value="vikings">US Bank Stadium</option>
-    
   </select>
-  <label htmlFor="subject">Subject:</label>
+  <label htmlFor="name">Your Name:</label>
   <input
     type="text"
-    id="subject"
+    id="name"
     onChange={handleChange}
-    value={formState.subject}
+    value={formState.name}
   />
-  <label htmlFor="message">Message</label>
-  <textarea
-    id="message"
-    cols="30"
-    rows="10"
+    <label htmlFor="gameAttended">Game You Attended:</label>
+  <input
+    type="text"
+    id="gameAttended"
     onChange={handleChange}
-    value={formState.message}
+    value={formState.gameAttended}
+  />
+    <label htmlFor="stadiumRating">Stadium Rating 1-5</label>
+  <input
+    type="text"
+    id="stadiumRating"
+    onChange={handleChange}
+    value={formState.stadiumRating}
+  />
+    <label htmlFor="foodRating">Food Rating 1-5:</label>
+  <input
+    type="text"
+    id="foodRating"
+    onChange={handleChange}
+    value={formState.foodRating}
+  />
+    <label htmlFor="seatSection">Section You Sat In:</label>
+  <input
+    type="text"
+    id="seatSection"
+    onChange={handleChange}
+    value={formState.seatSection}
+  />
+    <label htmlFor="ticketPrice">Ticket Price:</label>
+  <input
+    type="text"
+    id="ticketPrice"
+    onChange={handleChange}
+    value={formState.ticketPrice}
+  /> 
+  <label htmlFor="description">Comments</label>
+  <textarea
+    id="description"
+    cols="30"
+    rows="50"
+    onChange={handleChange}
+    value={formState.description}
   ></textarea>
-  <button type="submit">Send</button>
+  <button type="submit">Submit</button>
     </form>
   )
 }
