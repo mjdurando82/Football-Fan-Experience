@@ -5,6 +5,14 @@ const BASE_URL = `http://localhost:3001`
 
 const Reviews = () => {
 
+  const postReview = async () => {
+    try {
+      let res = await axios.post(`${BASE_URL}reviews`)
+    } catch (err) {
+      console.log(err)
+    }
+  }
+
   const [reviews, setReviews] = useState([])
 
   useEffect(() => {

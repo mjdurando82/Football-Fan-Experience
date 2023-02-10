@@ -21,7 +21,7 @@ const Home = () => {
 
   const postReview = async () => {
     try {
-      let res = await axios.get('http://localhost:3001/reviews')
+      let res = await axios.post('http://localhost:3001/reviews')
     } catch (err) {
       console.log(err)
     }

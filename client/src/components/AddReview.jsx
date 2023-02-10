@@ -1,7 +1,8 @@
 import axios from "axios"
 import { useState } from "react"
+const BASE_URL = `http://localhost:3001`
 
-const AddReview = () => {
+const AddReview = (props) => {
   const initialState = {
     stadium: '',
     name: '',
@@ -24,6 +25,15 @@ const AddReview = () => {
     e.preventDefault()
     await axios.post('http://localhost:3001/stadium/:id/reviews', formState)
     setFormState(initialState)
+    props.getReviews()
+  }
+
+  const postReview = async () => {
+    try {
+      let res = await axios.post(`${BASE_URL}reviews`)
+    } catch (err) {
+      console.log(err)
+    }
   }
 
   return(
@@ -32,10 +42,10 @@ const AddReview = () => {
       <label htmlFor="stadiumChoice">Pick a Stadium</label>
   <select id="stadium" onChange={handleChange} value={formState.stadium}>
     <option value="63e53d83294a9028beb35f36">Acrisure Stadium</option>
-    <option value="raiders">Allegiant Stadium</option>
-    <option value="chiefs">Arrowhead Stadium</option>
-    <option value="cowboys">AT&T Stadium</option>
-    <option value="panthers">Bank of America Stadium</option>
+    <option value="63e53d83294a9028beb35f37">Allegiant Stadium</option>
+    <option value="63e53d83294a9028beb35f38">Arrowhead Stadium</option>
+    <option value="63e53d83294a9028beb35f39">AT&T Stadium</option>
+    <option value="63e53d83294a9028beb35f3a">Bank of America Stadium</option>
     <option value="saints">Ceasars Superdome</option>
     <option value="broncos">Empower Field</option>
     <option value="commanders">FedEx Field</option>
@@ -112,7 +122,7 @@ const AddReview = () => {
     onChange={handleChange}
     value={formState.description}
   ></textarea>
-  <button type="submit">Submit</button>
+  <button type="submit" onSubmit={postReview}>Submit</button>
     </form>
   )
 }
