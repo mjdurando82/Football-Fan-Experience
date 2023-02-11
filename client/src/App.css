@@ -1,6 +1,10 @@
+h2 {
+  text-align: center;
+}
 img {
   height: 40vh;
-  width: 40vw;
+  width: 35vw;
+  border-radius: 10%;
 }
 form {
   display: flex;
@@ -10,4 +14,23 @@ form {
   width: 100vw;
   height: 30vh;
   padding-top: 30vh;
+}
+
+nav  a {
+  text-decoration: none;
+  color: black;
+  margin: 0 1em;
+}
+
+.stadiums {
+display: flex;
+flex-direction: column;
+align-content: center;
+flex-wrap: wrap;
+text-align: center;
+}
+
+.stadiums a {
+  color: black;
+  text-decoration: none;
 }

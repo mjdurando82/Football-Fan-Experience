@@ -14,6 +14,7 @@ const Home = () => {
   useEffect(() => {
     const getStadiums = async () => {
       const response = await axios.get(`${BASE_URL}/stadiums`)
+      console.log(response.data.stadiums)
       setStadiums(response.data.stadiums)
     }
     getStadiums()
@@ -28,14 +29,16 @@ const Home = () => {
   }
 
   return(
-    <div className="stadiums">
+    <div>
       <h2>Stadiums</h2>
+    <div className="stadiums">
       <section className="container-grid"></section>
       {stadiums.map((stadium) => (
         <Link to="/stadium/:id/reviews">
           <StadiumList key={stadium.name} name={stadium.name} location={stadium.location} imageUrl={stadium.imageUrl} homeTeam={stadium.homeTeam} capacity={stadium.capacity} fieldSurface={stadium.fieldSurface} />
         </Link>
       ))}
+    </div>
     </div>
   )
 }
