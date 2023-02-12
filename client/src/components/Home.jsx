@@ -9,7 +9,6 @@ const BASE_URL = `http://localhost:3001`
 
 const Home = () => {
   const [stadiums, setStadiums] = useState([])
-  const [reviews, setReviews] = useState([])
   
   useEffect(() => {
     const getStadiums = async () => {
@@ -20,13 +19,6 @@ const Home = () => {
     getStadiums()
   }, [])
 
-  const postReview = async () => {
-    try {
-      let res = await axios.post('http://localhost:3001/reviews')
-    } catch (err) {
-      console.log(err)
-    }
-  }
 
   return(
     <div>

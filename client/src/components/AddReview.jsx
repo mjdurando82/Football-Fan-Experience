@@ -1,6 +1,6 @@
 import axios from "axios"
-import { useState } from "react"
-import StadiumList from "./StadiumList"
+import { useEffect, useState } from "react"
+
 const BASE_URL = `http://localhost:3001`
 
 const AddReview = (props) => {
@@ -17,61 +17,59 @@ const AddReview = (props) => {
   }
 
   const [formState, setFormState] = useState(initialState)
+
+  
+  const [stadium, setStadium] = useState()
+
   const handleChange = (e) => {
     setFormState({...formState, [e.target.id]: e.target.value})
+    setStadium(formState.stadium)
   }
+  console.log(formState)
 
-  const postReview = async () => {
-    try {
-      let res = await axios.post(`${BASE_URL}/stadium/${StadiumList._id}/review`)
-    } catch (err) {
-      console.log(err)
-    }
-  }
-  
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await axios.post(`http://localhost:3001/stadium/${StadiumList._id}/reviews`, formState)
+    await axios.post(`${BASE_URL}/stadium/${stadium}/review`, formState)
     setFormState(initialState)
-    props.postReview()
+    props.getReviews()
   }
 
 
   return(
     <form onSubmit={handleSubmit}>
       <h3>Review</h3>
-      <label htmlFor="stadiumChoice">Pick a Stadium</label>
+      <label htmlFor="stadium">Pick a Stadium</label>
   <select id="stadium" onChange={handleChange} value={formState.stadium}>
     <option value="63e53d83294a9028beb35f36">Acrisure Stadium</option>
     <option value="63e53d83294a9028beb35f37">Allegiant Stadium</option>
     <option value="63e53d83294a9028beb35f38">Arrowhead Stadium</option>
     <option value="63e53d83294a9028beb35f39">AT&T Stadium</option>
     <option value="63e53d83294a9028beb35f3a">Bank of America Stadium</option>
-    <option value="saints">Ceasars Superdome</option>
-    <option value="broncos">Empower Field</option>
-    <option value="commanders">FedEx Field</option>
-    <option value="browns">First Energy Stadium</option>
-    <option value="lions">Ford Field</option>
-    <option value="pats">Gillette Stadium</option>
-    <option value="fins">Hard Rock Stadium</option>
-    <option value="bills">Highmark Stadium</option>
-    <option value="packers">Lambeau Field</option>
-    <option value="49ers">Levi Stadium</option>
-    <option value="eagles">Lincoln Financial Field</option>
-    <option value="colts">Lucas Oil Stadium</option>
-    <option value="seahawks">Lumen Field</option>
-    <option value="ravens">M&T Bank Stadium</option>
-    <option value="falcons">Mercedes Benz Stadium</option>
-    <option value="ny">MetLife Stadium</option>
-    <option value="titans">Nissan Stadium</option>
-    <option value="texans">NRG Stadium</option>
-    <option value="bengals">Paycor Stadium</option>
-    <option value="buccanneers">Raymond James Stadium</option>
-    <option value="la">SoFi Stadium</option>
-    <option value="bears">Soldier Field</option>
-    <option value="cardinals">State Farm Stadium</option>
-    <option value="jaguars">TIAA Bank Field</option>
-    <option value="vikings">US Bank Stadium</option>
+    <option value="63e53d83294a9028beb35f3b">Ceasars Superdome</option>
+    <option value="63e53d83294a9028beb35f3c">Empower Field</option>
+    <option value="63e53d83294a9028beb35f3d">FedEx Field</option>
+    <option value="63e53d83294a9028beb35f3e">First Energy Stadium</option>
+    <option value="63e53d83294a9028beb35f3f">Ford Field</option>
+    <option value="63e53d83294a9028beb35f40">Gillette Stadium</option>
+    <option value="63e53d83294a9028beb35f41">Hard Rock Stadium</option>
+    <option value="63e53d83294a9028beb35f42">Highmark Stadium</option>
+    <option value="63e53d83294a9028beb35f43">Lambeau Field</option>
+    <option value="63e53d83294a9028beb35f44">Levi Stadium</option>
+    <option value="63e53d83294a9028beb35f45">Lincoln Financial Field</option>
+    <option value="63e53d83294a9028beb35f46">Lucas Oil Stadium</option>
+    <option value="63e53d83294a9028beb35f47">Lumen Field</option>
+    <option value="63e53d83294a9028beb35f48">M&T Bank Stadium</option>
+    <option value="63e53d83294a9028beb35f49">Mercedes Benz Stadium</option>
+    <option value="63e53d83294a9028beb35f4a">MetLife Stadium</option>
+    <option value="63e53d83294a9028beb35f4b">Nissan Stadium</option>
+    <option value="63e53d83294a9028beb35f4c">NRG Stadium</option>
+    <option value="63e53d83294a9028beb35f4d">Paycor Stadium</option>
+    <option value="63e53d83294a9028beb35f4e">Raymond James Stadium</option>
+    <option value="63e53d83294a9028beb35f4f">SoFi Stadium</option>
+    <option value="63e53d83294a9028beb35f50">Soldier Field</option>
+    <option value="63e53d83294a9028beb35f51">State Farm Stadium</option>
+    <option value="63e53d83294a9028beb35f52">TIAA Bank Field</option>
+    <option value="63e53d83294a9028beb35f53">US Bank Stadium</option>
   </select>
   <label htmlFor="name">Your Name:</label>
   <input
@@ -115,6 +113,13 @@ const AddReview = (props) => {
     onChange={handleChange}
     value={formState.ticketPrice}
   /> 
+   <label htmlFor="parking">Parking Rating: </label>
+  <input
+    type="text"
+    id="parking"
+    onChange={handleChange}
+    value={formState.parking}
+  /> 
   <label htmlFor="description">Comments</label>
   <textarea
     id="description"
@@ -123,7 +128,7 @@ const AddReview = (props) => {
     onChange={handleChange}
     value={formState.description}
   ></textarea>
-  <button type="submit" onSubmit={postReview}>Submit</button>
+  <button type="submit">Submit</button>
     </form>
   )
 }

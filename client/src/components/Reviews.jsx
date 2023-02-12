@@ -11,7 +11,6 @@ const Reviews = () => {
   useEffect(() => {
     const getReviews = async () => {
       const response = await axios.get(`${BASE_URL}/reviews`)
-      console.log(response)
       setReviews(response.data.reviews)
     }
     getReviews()
