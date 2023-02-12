@@ -1,17 +1,10 @@
-import AddReview from "./AddReview"
-import { useState, useEffect } from "react"
 import axios from 'axios'
+import StadiumList from "./StadiumList"
+import { useState, useEffect } from "react"
+
 const BASE_URL = `http://localhost:3001`
 
 const Reviews = () => {
-
-  const postReview = async () => {
-    try {
-      let res = await axios.post(`${BASE_URL}reviews`)
-    } catch (err) {
-      console.log(err)
-    }
-  }
 
   const [reviews, setReviews] = useState([])
 
@@ -39,6 +32,8 @@ const Reviews = () => {
         <p>Sat in Section: {review.seatSection}</p>
         <p>TicketPrice: {review.ticketPrice}</p> 
         <p>Additional Comments: {review.description}</p>
+        <button className="edit">Edit</button>
+        <button className="delete">Delete</button>
       </div>
     ))}
   </div>

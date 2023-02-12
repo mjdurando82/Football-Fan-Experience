@@ -6,7 +6,7 @@ router.get('/', (req, res) => res.send('This is the root path'))
 
 router.get('/reviews', controllers.getAllReviews)
 
-router.post('/review', controllers.createReview)
+router.post('/stadium/:id/review', controllers.createReview)
 
 router.put('/review/:id', controllers.updateReview)
 

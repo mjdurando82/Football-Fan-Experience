@@ -2,7 +2,7 @@ body{
 background-color: gray;
 }
 
-h2 {
+h1 {
   text-align: center;
 }
 
@@ -21,9 +21,7 @@ form {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  width: 100vw;
-  height: 30vh;
-  padding-top: 30vh;
+  padding-top: 10vh;
 }
 
 nav  a {
@@ -35,9 +33,10 @@ nav  a {
 .stadiums {
 display: grid;
 grid-template-columns: repeat(auto-fill, 40vw);
-padding: 8vh;
+padding: 5vh;
 grid-template-rows: auto;
 text-align: center;
+justify-content: center;
 }
 
 .stadiums a {

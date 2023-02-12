@@ -4,11 +4,11 @@ const Nav = () => {
 
   return (
     <nav className='navbar'>
-      <div>
+      <header>
         <NavLink to='/'>Home</NavLink>
         <NavLink to='/add-review'>Add Review</NavLink>
         <NavLink to='/about'>About Page</NavLink>
-      </div>
+      </header>
     </nav>
   )
 }

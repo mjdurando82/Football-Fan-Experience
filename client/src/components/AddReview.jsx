@@ -1,5 +1,6 @@
 import axios from "axios"
 import { useState } from "react"
+import StadiumList from "./StadiumList"
 const BASE_URL = `http://localhost:3001`
 
 const AddReview = (props) => {
@@ -16,25 +17,25 @@ const AddReview = (props) => {
   }
 
   const [formState, setFormState] = useState(initialState)
-
   const handleChange = (e) => {
     setFormState({...formState, [e.target.id]: e.target.value})
   }
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    await axios.post('http://localhost:3001/stadium/:id/reviews', formState)
-    setFormState(initialState)
-    props.getReviews()
-  }
-
   const postReview = async () => {
     try {
-      let res = await axios.post(`${BASE_URL}reviews`)
+      let res = await axios.post(`${BASE_URL}/stadium/${StadiumList._id}/review`)
     } catch (err) {
       console.log(err)
     }
   }
+  
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    await axios.post(`http://localhost:3001/stadium/${StadiumList._id}/reviews`, formState)
+    setFormState(initialState)
+    props.postReview()
+  }
+
 
   return(
     <form onSubmit={handleSubmit}>
@@ -117,8 +118,8 @@ const AddReview = (props) => {
   <label htmlFor="description">Comments</label>
   <textarea
     id="description"
-    cols="30"
-    rows="50"
+    cols="35"
+    rows="7"
     onChange={handleChange}
     value={formState.description}
   ></textarea>

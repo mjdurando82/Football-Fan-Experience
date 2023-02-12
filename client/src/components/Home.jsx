@@ -30,10 +30,10 @@ const Home = () => {
 
   return(
     <div>
-      <h2>Stadiums</h2>
+      <h1>Stadiums</h1>
     <div className="stadiums">
       {stadiums.map((stadium) => (
-        <Link to="/stadium/:id/reviews">
+        <Link to={`/stadium/${stadium._id}/reviews`}>
           <StadiumList key={stadium.name} name={stadium.name} location={stadium.location} imageUrl={stadium.imageUrl} homeTeam={stadium.homeTeam} capacity={stadium.capacity} fieldSurface={stadium.fieldSurface} />
         </Link>
       ))}
