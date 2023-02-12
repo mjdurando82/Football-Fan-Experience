@@ -5,7 +5,7 @@ const BASE_URL = `http://localhost:3001`
 
 const AddReview = (props) => {
   const initialState = {
-    stadium: '',
+    stadium: '63e53d83294a9028beb35f36',
     name: '',
     gameAttended: '',
     stadiumRating: '',
@@ -15,7 +15,7 @@ const AddReview = (props) => {
     ticketPrice: '',
     description: '',
   }
-
+  
   const [formState, setFormState] = useState(initialState)
 
   
@@ -31,7 +31,6 @@ const AddReview = (props) => {
     e.preventDefault()
     await axios.post(`${BASE_URL}/stadium/${stadium}/review`, formState)
     setFormState(initialState)
-    props.getReviews()
   }
 
 
@@ -113,7 +112,7 @@ const AddReview = (props) => {
     onChange={handleChange}
     value={formState.ticketPrice}
   /> 
-   <label htmlFor="parking">Parking Rating: </label>
+  <label htmlFor="parking">Parking Rating: </label>
   <input
     type="text"
     id="parking"
