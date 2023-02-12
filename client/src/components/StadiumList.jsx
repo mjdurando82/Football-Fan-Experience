@@ -9,7 +9,7 @@ const StadiumList = (props) => {
         <h3>{props.name}</h3>
         <h5>{props.location}</h5>
         <h5>Home Team: {props.homeTeam}</h5>
-        <p> capacity: {props.capacity}</p>
+        <p> Capacity: {props.capacity}</p>
         <p>Field Surface: {props.fieldSurface}</p>
       </div>
     </div>
