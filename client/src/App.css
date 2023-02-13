@@ -1,5 +1,5 @@
 body{
-background-color: gray;
+background-size: cover;
 }
 
 h1 {
@@ -44,4 +44,6 @@ justify-content: center;
   text-decoration: none;
 }
 
-
+.reviews {
+  padding-top: 3vh;
+}

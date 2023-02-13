@@ -1,5 +1,5 @@
 import axios from "axios"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 
 const BASE_URL = `http://localhost:3001`
 
@@ -83,7 +83,7 @@ const AddReview = () => {
     onChange={handleChange}
     value={formState.gameAttended}
   />
-    <label htmlFor="stadiumRating">Stadium Rating 1-5</label>
+    <label htmlFor="stadiumRating">Stadium Rating 1-5:</label>
   <input
     type="text"
     id="stadiumRating"
