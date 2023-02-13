@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 
 const BASE_URL = `http://localhost:3001`
 
-const AddReview = (props) => {
+const AddReview = () => {
   const initialState = {
     stadium: '63e53d83294a9028beb35f36',
     name: '',
@@ -25,7 +25,6 @@ const AddReview = (props) => {
     setFormState({...formState, [e.target.id]: e.target.value})
     setStadium(formState.stadium)
   }
-  console.log(formState)
 
   const handleSubmit = async (e) => {
     e.preventDefault()

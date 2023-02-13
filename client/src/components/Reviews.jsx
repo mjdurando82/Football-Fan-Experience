@@ -1,30 +1,31 @@
 import axios from 'axios'
+import { useParams } from 'react-router-dom'
 import { useState, useEffect } from "react"
 
 const BASE_URL = `http://localhost:3001`
 
 
 const Reviews = () => {
-
   const [reviews, setReviews] = useState([])
 
+  let { id } = useParams()
 
   useEffect(() => {
     const getReviews = async () => {
-      const response = await axios.get(`${BASE_URL}/stadium/reviews`)
+      const response = await axios.get(`${BASE_URL}/stadium/${id}/reviews`)
       setReviews(response.data.reviews)
+      console.log(response.data.reviews)
     }
     getReviews()
   },[])
-  
-console.log(reviews)
+
 
   return(
     <div>
-    <h3>Reviews:</h3>
+    <h3>Reviews</h3>
     {reviews.map((review) => (
       <div key={review._id} className='review-container'>
-        <h5>{review.name}</h5>
+        <h4>{review.name}</h4>
         <p>Game Attended: {review.gameAttended}</p>
         <p>Stadium: {review.stadiumRating}</p> 
         <p>Food: {review.foodRating}</p>
@@ -33,7 +34,6 @@ console.log(reviews)
         <p>TicketPrice: {review.ticketPrice}</p> 
         <p>Additional Comments: {review.description}</p>
         <button className="edit">Edit</button>
-        <button className="delete">Delete</button>
       </div>
     ))}
   </div>

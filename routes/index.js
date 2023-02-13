@@ -4,7 +4,7 @@ const router = Router()
 
 router.get('/', (req, res) => res.send('This is the root path'))
 
-router.get('/stadium/reviews', controllers.getAllReviews)
+router.get('/stadium/:id/reviews', controllers.getAllReviews)
 
 router.post('/stadium/:id/review', controllers.createReview)
 

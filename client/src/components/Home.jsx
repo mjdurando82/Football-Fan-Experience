@@ -1,6 +1,4 @@
 import axios from 'axios'
-import Reviews from './Reviews'
-import AddReview from './AddReview'
 import StadiumList from "./StadiumList"
 import { Link } from 'react-router-dom'
 import { useEffect, useState } from "react"
@@ -13,7 +11,6 @@ const Home = () => {
   useEffect(() => {
     const getStadiums = async () => {
       const response = await axios.get(`${BASE_URL}/stadiums`)
-      console.log(response.data.stadiums)
       setStadiums(response.data.stadiums)
     }
     getStadiums()
@@ -23,9 +20,9 @@ const Home = () => {
   return(
     <div>
       <h1>Stadiums</h1>
-    <div className="stadiums">
+    <div className="stadiums" key={stadiums.name}>
       {stadiums.map((stadium) => (
-        <Link to={`/stadium/${stadium._id}/reviews`}>
+        <Link to= {`/stadium/${stadium._id}/reviews`}>
           <StadiumList key={stadium.name} name={stadium.name} location={stadium.location} imageUrl={stadium.imageUrl} homeTeam={stadium.homeTeam} capacity={stadium.capacity} fieldSurface={stadium.fieldSurface} />
         </Link>
       ))}
