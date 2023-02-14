@@ -7,8 +7,8 @@ const StadiumList = (props) => {
         <img src={props.imageUrl} alt='stadium'></img>
         <h5>{props.location}</h5>
         <h5>Home Team: {props.homeTeam}</h5>
-        <p> Capacity: {props.capacity}</p>
-        <p>Field Surface: {props.fieldSurface}</p>
+        <h5> Capacity: {props.capacity}</h5>
+        <h5>Field Surface: {props.fieldSurface}</h5>
       </div>
     </div>
   )
