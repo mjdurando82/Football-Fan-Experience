@@ -7,16 +7,15 @@ const BASE_URL = `http://localhost:3001`
 const EditReview = () => {
   
   let { id } = useParams()
-
-  const [review, setReview] = useState()
-
+  const [isLoaded, setIsLoaded] = useState(false)
+  
   const getReviewsById = async () => {
     const response = await axios.get(`${BASE_URL}/review/${id}`)
     setReview(response.data.review)
   }
-
+  
   let initialState = {
-    stadium: '',
+    stadium: '63e53d83294a9028beb35f36',
     name: '',
     gameAttended: '',
     stadiumRating: '',
@@ -26,7 +25,8 @@ const EditReview = () => {
     parking: '',
     description: ''
   }
-  console.log(review)
+  const [review, setReview] = useState(initialState)
+
   
   useEffect(() => {
     getReviewsById()
@@ -46,6 +46,7 @@ const EditReview = () => {
   }
 
 return (
+  // {isLoaded ? : ''}
   <form>
   <h3>Edit Review</h3>
   <label htmlFor="stadium">Pick a Stadium</label>
@@ -87,7 +88,7 @@ type="text"
 id="name"
 onChange={handleChange}
 value={formState.name}
-// placeholder={review.name}
+placeholder={review.name}
 />
 <label htmlFor="gameAttended">Game You Attended:</label>
 <input
