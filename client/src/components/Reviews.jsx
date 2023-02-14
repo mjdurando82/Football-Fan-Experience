@@ -7,20 +7,21 @@ const BASE_URL = `http://localhost:3001`
 
 const Reviews = () => {
   const [reviews, setReviews] = useState([])
-
+  
   let { id } = useParams()
 
+  const getReviews = async () => {
+    const response = await axios.get(`${BASE_URL}/stadium/${id}/reviews`)
+    setReviews(response.data.reviews)
+  }
+
   useEffect(() => {
-    const getReviews = async () => {
-      const response = await axios.get(`${BASE_URL}/stadium/${id}/reviews`)
-      setReviews(response.data.reviews)
-    }
     getReviews()
   },[])
 
   const handleDelete = async (reviewId) => {
     await axios.delete(`${BASE_URL}/review/${reviewId}`)
-    setReviews()
+    getReviews()
   }
 
   const handleUpdate = async (reviewId) => {
