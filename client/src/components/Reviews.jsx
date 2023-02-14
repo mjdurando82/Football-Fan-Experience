@@ -22,10 +22,6 @@ const Reviews = () => {
     getReviews()
   }
   
-  const handleUpdate = async (reviewId) => {
-    await axios.put(`${BASE_URL}/review/${reviewId}`)
-    getReviews()
-  }
   
   useEffect(() => {
     getReviews()
