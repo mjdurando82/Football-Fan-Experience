@@ -6,6 +6,7 @@ import Reviews from './components/Reviews'
 import AddReview from './components/AddReview'
 import { Routes, Route } from 'react-router-dom'
 import StadiumList from './components/StadiumList'
+import EditReview from './components/EditReview'
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
           <Route path="/add-review" element={<AddReview />} />
           <Route path="/stadium/:id/reviews" element={<Reviews />} />
           <Route path="/stadium/:id/reviews/:id" />
+          <Route path="/review/:id/edit" element={<EditReview />} />
         </Routes>
       </main>
     </div>
