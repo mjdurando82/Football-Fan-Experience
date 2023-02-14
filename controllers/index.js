@@ -24,6 +24,7 @@ const getAllReviews = async (req, res) => {
 
 const updateReview = async (req, res) => {
   try {
+    console.log(req.body)
     const review = await Review.findByIdAndUpdate(req.params.id, req.body, {
       new: true
     })

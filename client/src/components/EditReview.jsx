@@ -23,8 +23,6 @@ const EditReview = () => {
 
   console.log(initialState)
 
-  const [reviews, setReviews] = useState([])
-
   const [formState, setFormState] = useState(initialState)
 
   const [stadium, setStadium] = useState()
@@ -35,8 +33,8 @@ const EditReview = () => {
   }
   console.log(formState)
 
-  const handleUpdate = async (reviewId) => {
-    await axios.put(`${BASE_URL}/review/${reviewId}`)
+  const handleUpdate = async () => {
+    await axios.put(`${BASE_URL}/review/${id}`, formState)
   }
 
 return (
