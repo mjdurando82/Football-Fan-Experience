@@ -5,7 +5,8 @@ body{
     #113311 20px,
     rgb(6, 82, 6) 20px,
     #0e2d12 30px
-  );  
+  );
+  background-attachment: fixed;
 }
 h1 {
   text-align: center;
