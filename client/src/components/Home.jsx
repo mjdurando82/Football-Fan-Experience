@@ -18,7 +18,7 @@ const Home = () => {
 
 
   return(
-    <div>
+    <div className='home'>
       <h1>Stadiums</h1>
     <div className="stadiums" key={stadiums.name}>
       {stadiums.map((stadium) => (

@@ -21,8 +21,7 @@ const Reviews = () => {
     await axios.delete(`${BASE_URL}/review/${reviewId}`)
     getReviews()
   }
-  
-  
+    
   useEffect(() => {
     getReviews()
   },[])

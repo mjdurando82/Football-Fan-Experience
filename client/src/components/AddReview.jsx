@@ -126,7 +126,7 @@ const AddReview = () => {
     onChange={handleChange}
     value={formState.description}
   ></textarea>
-  <button type="submit">Submit</button>
+  <button className="submit" type="submit">Submit</button>
     </form>
   )
 }
