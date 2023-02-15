@@ -8,12 +8,27 @@ body{
   );
   background-attachment: fixed;
 }
+
+header {
+  background-color: black;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 2rem;
+  text-align: start;
+  padding-top: 1rem;
+}
+
 h1 {
   text-align: center;
+  padding-top: 3rem;
   color: white;
 }
 
 h3 {
+  padding-top: 3rem;
   text-align: center;
   color: white;
 }
@@ -49,10 +64,15 @@ select {
   border: solid black 3px; 
 }
 
+
 nav  a {
   text-decoration: none;
   color: white;
-  margin: 0 1em;
+  margin: 2rem; 
+}
+
+nav a:hover {
+  color: gray;
 }
 
 p {
@@ -87,8 +107,6 @@ grid-template-columns: repeat(auto-fill, 40vw);
 padding: 5vh;
 text-align: center;
 border-bottom: white solid;
-border-top: white solid;
-
 }
 
 .delete {

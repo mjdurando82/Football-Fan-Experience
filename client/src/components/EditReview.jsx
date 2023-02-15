@@ -1,6 +1,7 @@
 import axios from "axios"
 import { useState, useEffect } from "react"
 import { useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const BASE_URL = `http://localhost:3001`
 
@@ -147,7 +148,9 @@ onChange={handleChange}
 value={formState.description}
 placeholder={review.description}
 ></textarea>
+<Link to='/'>
 <button type="save" onClick={()=>handleUpdate()}>Save</button>
+</Link>
 </form>
 )
 }
