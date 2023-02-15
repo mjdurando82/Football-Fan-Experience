@@ -1,5 +1,6 @@
 body{
 background-size: cover;
+background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdBUu1CMmdsm_f5MDj6AyyTZhq4mPK98_SiA&usqp=CAU)
 }
 
 h1 {
@@ -30,6 +31,10 @@ nav  a {
   margin: 0 1em;
 }
 
+p {
+  color: bisque;
+}
+
 .stadiums {
 display: grid;
 grid-template-columns: repeat(auto-fill, 40vw);
@@ -45,5 +50,21 @@ justify-content: center;
 }
 
 .reviews {
-  padding-top: 3vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 40vw);
+  grid-template-rows: auto;
+  border: 3px solid black;
+  justify-content: space-around;
+  background-color: gray;
+  margin-left: 5vw;
+  margin-right: 5vw;
 }
+
+.delete {
+  width: 7vw;
+}
+
+.edit {
+  width: 7vw;
+}
+

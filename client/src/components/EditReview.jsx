@@ -9,10 +9,6 @@ const EditReview = () => {
   let { id } = useParams()
   const [isLoaded, setIsLoaded] = useState(false)
   
-  const getReviewsById = async () => {
-    const response = await axios.get(`${BASE_URL}/review/${id}`)
-    setReview(response.data.review)
-  }
   
   let initialState = {
     stadium: '63e53d83294a9028beb35f36',
@@ -26,7 +22,12 @@ const EditReview = () => {
     description: ''
   }
   const [review, setReview] = useState(initialState)
-
+  
+  const getReviewsById = async () => {
+    const response = await axios.get(`${BASE_URL}/review/${id}`)
+    console.log(response.data.review)
+    setReview(response.data.review)
+  }
   
   useEffect(() => {
     getReviewsById()
@@ -46,7 +47,6 @@ const EditReview = () => {
   }
 
 return (
-  // {isLoaded ? : ''}
   <form>
   <h3>Edit Review</h3>
   <label htmlFor="stadium">Pick a Stadium</label>
@@ -83,7 +83,7 @@ return (
     <option value="63e53d83294a9028beb35f53">US Bank Stadium</option>
   </select>
 <label htmlFor="name">Your Name:</label>
-<input
+<input 
 type="text"
 id="name"
 onChange={handleChange}
@@ -96,15 +96,15 @@ type="text"
 id="gameAttended"
 onChange={handleChange}
 value={formState.gameAttended}
-// placeholder={review.gameAttended}
+placeholder={review.gameAttended}
 />
 <label htmlFor="stadiumRating">Stadium Rating 1-5:</label>
-<input
+<input 
 type="text"
 id="stadiumRating"
 onChange={handleChange}
 value={formState.stadiumRating}
-// placeholder={review.stadiumRating}
+placeholder={review.stadiumRating}
 />
 <label htmlFor="foodRating">Food Rating 1-5:</label>
 <input
@@ -112,7 +112,7 @@ type="text"
 id="foodRating"
 onChange={handleChange}
 value={formState.foodRating}
-// placeholder={review.foodRating}
+placeholder={review.foodRating}
 />
 <label htmlFor="seatSection">Section You Sat In:</label>
 <input
@@ -120,7 +120,7 @@ type="text"
 id="seatSection"
 onChange={handleChange}
 value={formState.seatSection}
-// placeholder={review.seatSection}
+placeholder={review.seatSection}
 />
 <label htmlFor="ticketPrice">Ticket Price:</label>
 <input
@@ -128,7 +128,7 @@ type="text"
 id="ticketPrice"
 onChange={handleChange}
 value={formState.ticketPrice}
-// placeholder={review.ticketPrice}
+placeholder={review.ticketPrice}
 /> 
 <label htmlFor="parking">Parking Rating: </label>
 <input
@@ -136,7 +136,7 @@ type="text"
 id="parking"
 onChange={handleChange}
 value={formState.parking}
-// placeholder={review.parking}
+placeholder={review.parking}
 /> 
 <label htmlFor="description">Comments</label>
 <textarea
@@ -145,7 +145,7 @@ cols="35"
 rows="7"
 onChange={handleChange}
 value={formState.description}
-// placeholder={review.description}
+placeholder={review.description}
 ></textarea>
 <button type="save" onClick={()=>handleUpdate()}>Save</button>
 </form>
