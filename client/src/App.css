@@ -103,9 +103,8 @@ button:hover {
   grid-template-rows: auto;
   text-align: center;
   justify-content: center;
-  border-bottom: white solid;
-  border-top: white solid;
-  background: gray;
+  border: black solid;
+  background: rgb(211, 209, 209);
   border-radius: 50%;
   margin-left: 10%;
   margin-right: 10%;

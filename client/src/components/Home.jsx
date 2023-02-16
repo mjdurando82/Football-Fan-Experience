@@ -12,18 +12,19 @@ const Home = () => {
     const getStadiums = async () => {
       const response = await axios.get(`${BASE_URL}/stadiums`)
       setStadiums(response.data.stadiums)
+      console.log(stadiums)
     }
     getStadiums()
   }, [])
 
 
   return(
-    <div className='home'>
+    <div>
       <h1>Stadiums</h1>
-    <div className="stadiums" key={stadiums.name}>
+    <div className="stadiums">
       {stadiums.map((stadium) => (
         <Link to= {`/stadium/${stadium._id}/reviews`}>
-          <StadiumList key={stadium._id} name={stadium.name} location={stadium.location} imageUrl={stadium.imageUrl} homeTeam={stadium.homeTeam} capacity={stadium.capacity} fieldSurface={stadium.fieldSurface} />
+          <StadiumList key={stadium.name} name={stadium.name} location={stadium.location} imageUrl={stadium.imageUrl} homeTeam={stadium.homeTeam} capacity={stadium.capacity} fieldSurface={stadium.fieldSurface} />
         </Link>
       ))}
     </div>

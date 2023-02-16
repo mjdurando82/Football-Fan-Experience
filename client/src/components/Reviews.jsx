@@ -42,7 +42,7 @@ const Reviews = () => {
         <p>Ticket Price: {review.ticketPrice}</p> 
         <p>Additional Comments: {review.description}</p>
         <section>
-          <Link to={`/review/${review._id}/edit`}>
+        <Link to={`/review/${review._id}/edit`}>
         <button className='edit'>Edit</button>
         </Link>
         <button className='delete' onClick={()=> handleDelete(review._id)}>Delete</button>
