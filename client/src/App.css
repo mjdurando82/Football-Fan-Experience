@@ -60,6 +60,10 @@ input {
   padding: .2rem;
 }
 
+textarea {
+  border: solid black 3px;
+}
+
 select {
   border: solid black 3px; 
 }
