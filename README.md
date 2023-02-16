@@ -91,7 +91,10 @@
 - https://media.bleacherreport.com/image/upload/v1668890072/gdggwx6rrq3jkwquvpq1.jpg
 - https://img.apmcdn.org/d62c51a8154d401fd8aac5c4f5b8415709dddcd0/normal/253651-20160828-vikes01.jpg
 - https://img.freepik.com/free-vector/realistic-american-football-stadium_52683-53798.jpg
+<<<<<<< HEAD
 
+=======
+>>>>>>> 32d9ffcedf3077089d363252e9b81dc6ac28b5dd
 ```
 
 ```
