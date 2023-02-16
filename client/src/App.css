@@ -89,7 +89,7 @@ label {
 .stadiums {
 display: grid;
 grid-template-columns: repeat(auto-fill, 40vw);
-padding: 5vh;
+padding: 1vh;
 grid-template-rows: auto;
 text-align: center;
 justify-content: center;
@@ -101,12 +101,17 @@ justify-content: center;
 }
 
 .reviews {
-display: grid;
-justify-content: center;
-grid-template-columns: repeat(auto-fill, 40vw);
-padding: 5vh;
-text-align: center;
-border-bottom: white solid;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 40vw);
+  padding: 1vh;
+  grid-template-rows: auto;
+  text-align: center;
+  justify-content: center;
+  border-bottom: white solid;
+  border-top: white solid;
+  background: #0e2d12;
+  border-radius: 30%;
+
 }
 
 .delete {
@@ -122,3 +127,6 @@ border-bottom: white solid;
   align-self: center;
 }
 
+.about {
+  text-align: center;
+}

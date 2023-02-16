@@ -37,7 +37,7 @@ const Reviews = () => {
         <p>Game Attended: {review.gameAttended}</p>
         <p>Stadium: {review.stadiumRating}</p> 
         <p>Food: {review.foodRating}</p>
-        <p>Parking {review.parking}</p>
+        <p>Parking: {review.parking}</p>
         <p>Sat in Section: {review.seatSection}</p>
         <p>TicketPrice: {review.ticketPrice}</p> 
         <p>Additional Comments: {review.description}</p>
