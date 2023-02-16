@@ -12,7 +12,6 @@ const Home = () => {
     const getStadiums = async () => {
       const response = await axios.get(`${BASE_URL}/stadiums`)
       setStadiums(response.data.stadiums)
-      console.log(stadiums)
     }
     getStadiums()
   }, [])
