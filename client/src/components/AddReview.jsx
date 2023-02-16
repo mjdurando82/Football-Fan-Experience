@@ -35,7 +35,7 @@ const AddReview = () => {
 
   return(
     <form onSubmit={handleSubmit}>
-      <h3>Review</h3>
+      <h3>Review Form</h3>
       <label htmlFor="stadium">Pick a Stadium</label>
   <select id="stadium" onChange={handleChange} value={formState.stadium}>
     <option value="63e53d83294a9028beb35f36">Acrisure Stadium</option>
@@ -111,7 +111,7 @@ const AddReview = () => {
     onChange={handleChange}
     value={formState.ticketPrice}
   /> 
-  <label htmlFor="parking">Parking Rating: </label>
+  <label htmlFor="parking">Parking Rating 1-5: </label>
   <input
     type="text"
     id="parking"

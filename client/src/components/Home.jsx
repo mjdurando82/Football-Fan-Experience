@@ -23,7 +23,7 @@ const Home = () => {
     <div className="stadiums" key={stadiums.name}>
       {stadiums.map((stadium) => (
         <Link to= {`/stadium/${stadium._id}/reviews`}>
-          <StadiumList key={stadium.name} name={stadium.name} location={stadium.location} imageUrl={stadium.imageUrl} homeTeam={stadium.homeTeam} capacity={stadium.capacity} fieldSurface={stadium.fieldSurface} />
+          <StadiumList key={stadium._id} name={stadium.name} location={stadium.location} imageUrl={stadium.imageUrl} homeTeam={stadium.homeTeam} capacity={stadium.capacity} fieldSurface={stadium.fieldSurface} />
         </Link>
       ))}
     </div>
