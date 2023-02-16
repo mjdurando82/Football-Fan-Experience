@@ -28,7 +28,7 @@ const EditReview = () => {
   const handleUpdate = async () => {
     await axios.put(`${BASE_URL}/review/${id}`, formState)
   }
-  
+
   if (isLoaded === true){
     initialState = {
     stadium: review.stadium,
@@ -52,39 +52,6 @@ const EditReview = () => {
 return (
   <form>
   <h3>Edit Review</h3>
-  <label htmlFor="stadium">Pick a Stadium</label>
-  <select id="stadium" onChange={handleChange} value={formState.stadium}>
-    <option value="63e53d83294a9028beb35f36">Acrisure Stadium</option>
-    <option value="63e53d83294a9028beb35f37">Allegiant Stadium</option>
-    <option value="63e53d83294a9028beb35f38">Arrowhead Stadium</option>
-    <option value="63e53d83294a9028beb35f39">AT&T Stadium</option>
-    <option value="63e53d83294a9028beb35f3a">Bank of America Stadium</option>
-    <option value="63e53d83294a9028beb35f3b">Ceasars Superdome</option>
-    <option value="63e53d83294a9028beb35f3c">Empower Field</option>
-    <option value="63e53d83294a9028beb35f3d">FedEx Field</option>
-    <option value="63e53d83294a9028beb35f3e">First Energy Stadium</option>
-    <option value="63e53d83294a9028beb35f3f">Ford Field</option>
-    <option value="63e53d83294a9028beb35f40">Gillette Stadium</option>
-    <option value="63e53d83294a9028beb35f41">Hard Rock Stadium</option>
-    <option value="63e53d83294a9028beb35f42">Highmark Stadium</option>
-    <option value="63e53d83294a9028beb35f43">Lambeau Field</option>
-    <option value="63e53d83294a9028beb35f44">Levi Stadium</option>
-    <option value="63e53d83294a9028beb35f45">Lincoln Financial Field</option>
-    <option value="63e53d83294a9028beb35f46">Lucas Oil Stadium</option>
-    <option value="63e53d83294a9028beb35f47">Lumen Field</option>
-    <option value="63e53d83294a9028beb35f48">M&T Bank Stadium</option>
-    <option value="63e53d83294a9028beb35f49">Mercedes Benz Stadium</option>
-    <option value="63e53d83294a9028beb35f4a">MetLife Stadium</option>
-    <option value="63e53d83294a9028beb35f4b">Nissan Stadium</option>
-    <option value="63e53d83294a9028beb35f4c">NRG Stadium</option>
-    <option value="63e53d83294a9028beb35f4d">Paycor Stadium</option>
-    <option value="63e53d83294a9028beb35f4e">Raymond James Stadium</option>
-    <option value="63e53d83294a9028beb35f4f">SoFi Stadium</option>
-    <option value="63e53d83294a9028beb35f50">Soldier Field</option>
-    <option value="63e53d83294a9028beb35f51">State Farm Stadium</option>
-    <option value="63e53d83294a9028beb35f52">TIAA Bank Field</option>
-    <option value="63e53d83294a9028beb35f53">US Bank Stadium</option>
-  </select>
 <label htmlFor="name">Your Name:</label>
 <input
 type="text"
