@@ -22,8 +22,6 @@
 
 #### ![ReviewForm](https://github.com/mjdurando82/Football-Fan-Experience/blob/210cd52a97a9b9f81b5f036939819e759b5cfae2/Screenshot%202023-02-16%20at%2012.32.49%20PM.png)
 
-#### ![Review](https://github.com/mjdurando82/Football-Fan-Experience/blob/8b19334cc84bf064c91648e79e3a78d6589911cb/Screenshot%202023-02-16%20at%203.19.44%20PM.png)
-
 ---
 
 ### **_Technologies Used_**
