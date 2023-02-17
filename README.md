@@ -40,7 +40,7 @@
 
 #### Visit the page, pick the stadium that you visited or are interested in to get more information. You can leave your review or check out other reviews!
 
-#### A Trello board, a component hierachy diagram, and a entity relationship diagram were used to track and organize the development progress. They can be viewed here. [Trello](https://trello.com/b/9x63GvUm/football-fan-experience) [Component-Hierarchy-Diagram](https://drive.google.com/file/d/1RgzoEP9FSr88FkqVcuZVS8S5z5DpAjX7/view?usp=sharing)[ERD](https://drive.google.com/file/d/15S5AcuexburTZi_lkuvTqyfDAEvfKSS2/view?usp=sharing)
+#### A Trello board, a component hierachy diagram, and a entity relationship diagram were used to track and organize the development progress. They can be viewed here. [Trello](https://trello.com/b/9x63GvUm/football-fan-experience) |[Component-Hierarchy-Diagram](https://drive.google.com/file/d/1RgzoEP9FSr88FkqVcuZVS8S5z5DpAjX7/view?usp=sharing) | [ERD](https://drive.google.com/file/d/15S5AcuexburTZi_lkuvTqyfDAEvfKSS2/view?usp=sharing)
 
 ---
 
