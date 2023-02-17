@@ -33,6 +33,7 @@ const AddReview = () => {
 
 
   return(
+    <div className="form">
     <form onSubmit={handleSubmit}>
       <h3>Review Form</h3>
       <label htmlFor="stadium">Pick a Stadium</label>
@@ -127,6 +128,7 @@ const AddReview = () => {
   ></textarea>
   <button className="submit" type="submit">Submit</button>
   </form>
+  </div>
   )
 }
 
