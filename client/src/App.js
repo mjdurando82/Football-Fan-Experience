@@ -4,9 +4,9 @@ import Home from './components/Home'
 import About from './components/About'
 import Reviews from './components/Reviews'
 import AddReview from './components/AddReview'
+import EditReview from './components/EditReview'
 import { Routes, Route } from 'react-router-dom'
 import StadiumList from './components/StadiumList'
-import EditReview from './components/EditReview'
 
 const App = () => {
   return (

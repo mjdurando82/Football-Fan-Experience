@@ -120,6 +120,8 @@ button:hover {
 
 .addReview {
   border: none;
+  float: right;
+  padding: 1vh;
 }
 
 .delete {

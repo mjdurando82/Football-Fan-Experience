@@ -49,7 +49,7 @@ const Reviews = () => {
         </section>
       </div>
     ))}
-    <section>
+    <section className='add-review'>
       <Link to='/add-review'>
       <button className='addReview'>Add Review</button>
       </Link>
