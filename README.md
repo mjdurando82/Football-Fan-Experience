@@ -62,7 +62,8 @@
 - https://static.clubs.nfl.com/image/private/t_new_photo_album/raiders/drllv1iuqinjfvqrjb2j.jpg
 - https://www.stadiumsofprofootball.com/wp-content/uploads/2016/07/arrow16_top.jpg
 - https://assets.simpleviewinc.com/simpleview/image/fetch/c_limit,q_75,w_1200/https://assets.simpleviewinc.com/simpleview/image/upload/crm/denton/att-stadium-5201668_1280_FA6D2F43-5056-A348-3AB1AA462F23E0A1-fa6d2e9b5056a34_fa6d2fb0-5056-a348-3a347812dae831cc.jpg
-- https://d2j8c2rj2f9b78.cloudfront.net/uploads/poster-images/BofA-Stadium_TEST.jpg -https://trahanarchitects.com/wp-content/uploads/2020/09/SDNRP_190524_View5-Stadium-2.jpg
+- https://d2j8c2rj2f9b78.cloudfront.net/uploads/poster-images/BofA-Stadium_TEST.jpg
+- https://trahanarchitects.com/wp-content/uploads/2020/09/SDNRP_190524_View5-Stadium-2.jpg
 - https://trahanarchitects.com/wp-content/uploads/2020/09/SDNRP_190524_View5-Stadium-2.jpg
 - https://broncoswire.usatoday.com/wp-content/uploads/sites/68/2021/08/Broncos-Stadium-Rank.jpg?w=1000&h=600&crop=1
 - https://www.stadiumsofprofootball.com/wp-content/uploads/2016/07/fedex23950.jpg
