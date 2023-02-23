@@ -1,8 +1,6 @@
 import axios from "axios"
 import { useState } from "react"
 
-const BASE_URL = `http://localhost:3001`
-
 const AddReview = () => {
   const initialState = {
     stadium: '63e53d83294a9028beb35f36',
@@ -27,7 +25,7 @@ const AddReview = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await axios.post(`${BASE_URL}/stadium/${stadium}/review`, formState)
+    await axios.post(`/api/stadium/${stadium}/review`, formState)
     setFormState(initialState)
   }
 

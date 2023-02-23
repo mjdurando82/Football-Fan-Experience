@@ -3,8 +3,6 @@ import { useState, useEffect } from "react"
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 
-const BASE_URL = `http://localhost:3001`
-
 const EditReview = () => {
   
   const [stadium, setStadium] = useState()
@@ -15,7 +13,7 @@ const EditReview = () => {
   let initialState = {}
   
   const getReviewsById = async () => {
-    const response = await axios.get(`${BASE_URL}/review/${id}`)
+    const response = await axios.get(`/api/review/${id}`)
     setReview(response.data.review)
     setIsLoaded(true)
   }
@@ -26,7 +24,7 @@ const EditReview = () => {
   
   
   const handleUpdate = async () => {
-    await axios.put(`${BASE_URL}/review/${id}`, formState)
+    await axios.put(`/api/review/${id}`, formState)
   }
 
   if (isLoaded === true){

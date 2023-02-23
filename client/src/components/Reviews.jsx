@@ -3,22 +3,19 @@ import { Link } from 'react-router-dom'
 import { useState, useEffect } from "react"
 import { useParams } from 'react-router-dom'
 
-const BASE_URL = `http://localhost:3001`
-
-
 const Reviews = () => {
   const [reviews, setReviews] = useState([])
   
   let { id } = useParams()
   
   const getReviews = async () => {
-    const response = await axios.get(`${BASE_URL}/stadium/${id}/reviews`)
+    const response = await axios.get(`/api/stadium/${id}/reviews`)
     setReviews(response.data.reviews)
   }
   
   
   const handleDelete = async (reviewId) => {
-    await axios.delete(`${BASE_URL}/review/${reviewId}`)
+    await axios.delete(`/api/review/${reviewId}`)
     getReviews()
   }
     
