@@ -3,11 +3,19 @@ import { Link } from 'react-router-dom'
 import { useState, useEffect } from "react"
 import { useParams } from 'react-router-dom'
 
-const Reviews = () => {
+const Reviews = (stadiums, reviews, getReviews, getStadiums) => {
   const [reviews, setReviews] = useState([])
-  
+  const [thisStadium, setThisStadium] = useState(stadiums)
+
   let { id } = useParams()
+  const selectStadium = () => {
+    setThisStadium(stadiums.find((stadium) => stadium._id === `${id}`))
+  }
   
+  useEffect(() => {
+    selectStadium()
+  })
+
   const getReviews = async () => {
     const response = await axios.get(`/api/stadium/${id}/reviews`)
     setReviews(response.data.reviews)
@@ -27,6 +35,14 @@ const Reviews = () => {
 
   return(
     <div>
+    <div className='stadium-card'>
+    <h3>{props.name}</h3>
+        <img src={thisStadium.imageUrl} alt='stadium'></img>
+        <h5>{thisStadium.location}</h5>
+        <h5>Home Team: {thisStadium.homeTeam}</h5>
+        <h5> Capacity: {thisStadium.capacity}</h5>
+        <h5>Field Surface: {thisStadium.fieldSurface}</h5>
+    </div>
     <h1 className='review-title'>Reviews</h1>
     {reviews.map((review) => (
       <div key={review._id} className='reviews'>
