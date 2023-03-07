@@ -6,15 +6,16 @@ import { useEffect, useState } from "react"
 const Home = () => {
   const [stadiums, setStadiums] = useState([])
   
+  const getStadiums = async () => {
+    const response = await axios.get(`/api/stadiums`)
+    setStadiums(response.data.stadiums)
+  }
+
   useEffect(() => {
-    const getStadiums = async () => {
-      const response = await axios.get(`/api/stadiums`)
-      setStadiums(response.data.stadiums)
-    }
     getStadiums()
   }, [])
 
-
+if(stadiums.length > 0){
   return(
     <div>
       <h1>Stadiums</h1>
@@ -27,6 +28,7 @@ const Home = () => {
     </div>
     </div>
   )
+} 
 }
 
 export default Home 
