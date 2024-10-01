@@ -7,16 +7,18 @@ const routes = require('./routes')
 
 const PORT = process.env.PORT || 3001
 
-// app.use() middleware here
-
 const app = express()
 
-app.use(express.json())
-app.use(logger('dev'))
+// const allowedOrigins = ['https://football-experience.vercel.app/']
+
 app.use(cors())
+app.use(logger('dev'))
+app.use(express.json())
+
 app.use(express.static(`${__dirname}/client/build`))
 
 app.use('/api', routes)
+
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 app.get('/*', (req, res) => {
