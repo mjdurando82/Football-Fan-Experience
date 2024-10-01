@@ -12,9 +12,9 @@ const Reviews = () => {
   //   setThisStadium(stadiums.find((stadium) => stadium._id === `${id}`))
   // }
   
-  // useEffect(() => {
-  //   selectStadium()
-  // })
+  // // useEffect(() => {
+  // //   selectStadium()
+  // // })
 
   const getReviews = async () => {
     const response = await axios.get(`/api/stadium/${id}/reviews`)
