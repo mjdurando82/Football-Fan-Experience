@@ -13,7 +13,7 @@ const EditReview = () => {
   let initialState = {}
   
   const getReviewsById = async () => {
-    const response = await axios.get(`/api/review/${id}`)
+    const response = await axios.get(`https://football-fan-experience.vercel.app/api/review/${id}`)
     setReview(response.data.review)
     setIsLoaded(true)
   }

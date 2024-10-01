@@ -25,7 +25,7 @@ const AddReview = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-    await axios.post(`/api/stadium/${stadium}/review`, formState)
+    await axios.post(`https://football-fan-experience.vercel.app/api/stadium/${stadium}/review`, formState)
     setFormState(initialState)
   }
 

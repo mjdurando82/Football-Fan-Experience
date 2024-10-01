@@ -7,7 +7,7 @@ const Home = () => {
   const [stadiums, setStadiums] = useState([])
   
   const getStadiums = async () => {
-    const response = await axios.get(`/api/stadiums`)
+    const response = await axios.get(`https://football-fan-experience.vercel.app/api/stadiums`)
     setStadiums(response.data.stadiums)
   }
 
